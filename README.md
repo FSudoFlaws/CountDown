@@ -1,4 +1,4 @@
 # CountDown
 Count Down Web Page
 
-CountDown1/Screenshot from 2020-11-15 09-54-58.png
+https://github.com/FSudoFlaws/CountDown/blob/main/CountDown1/Screenshot%20from%202020-11-15%2009-54-58.png
