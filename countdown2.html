@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Chilanka&family=Orbitron:wght@600&family=Poppins:wght@200&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Stalinist+One&display=swap');
+
+
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Goldman", sans-serif;
+  background: #262626;
+ }
+.center{
+  position: absolute;
+  top:50%;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+              
+  }            
+              
+p {
+  color: #ced431;
+  text-align: center;
+  font-family: 'Pangolin';
+  margin: 0;
+  padding: 0;
+  
+  }
+
+#clock{
+   font-size: 3em;
+   text-align:center;
+   border-left: 5px solid #f5593d;
+   border-right: 5px solid #f5593d;
+}
+
+.sp{
+ font-size:20px;
+ font-family: "Goldman";
+ }
+    
+ h1{
+ color: #d67e2b;
+ } 
+a{
+    color: #48d945;
+}
+
+.logou{
+   font-size:35px;
+   text-decoration: none;
+}
+
+
+.glow {
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ac8f2, 0 0 20px #0ac8f2, 0 0 25px #0ac8f2, 0 0 30px #0ac8f2, 0 0 35px #0ac8f2;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 15px #0ac8f2, 0 0 20px #0ac8f2, 0 0 25px #0ac8f2, 0 0 30px #0ac8f2, 0 0 35px #0ac8f2, 0 0 40px #0ac8f2;
+  }
+}       
+</style>
+</head>
+<body>
+
+<div class="center">
+<h1><span class='glow'>sudoflaws</span><br/><br/>CTF Will Starts at<br />12:00:00 PM</br>15-11-2020 </h1>
+<p id="clock"></p>
+<br/>
+<br/>
+
+<a class="logou" href='logout.php'">Logout</a>
+</div>
+<script>
+
+var countDownDate = new Date("Nov 15, 2020 12:00:25").getTime();
+
+
+var x = setInterval(function() {
+
+  
+  var now = new Date().getTime();
+    
+ 
+  var distance = countDownDate - now;
+    
+  
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  
+  document.getElementById("clock").innerHTML = days + "<span class='sp'>days</span>    " + hours + "<span class='sp'>hr</span>    "
+  + minutes + "<span class='sp'>min</span>    " + seconds + "<span class='sp'>sec</span>    ";
+    
+   
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("clock").innerHTML = "CTF STARTING......";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
